@@ -13,7 +13,7 @@ quiver(x,y,px,py), hold off
 
 
 
-
+%g
 
 
 X(:, :, 1) = [
