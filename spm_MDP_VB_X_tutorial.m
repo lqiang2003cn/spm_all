@@ -850,7 +850,7 @@ for t = 1:T
                                 % emprical priors (backward messages)
                                 %------------------------------------------
                                 if j < R
-                                    px = spm_log(rB{m,f}(:,:,V{m}(j    ,k,f))*x{m,f}(:,j + 1,k));
+                                    px = spm_log(rB{m,f}(:,:,V{m}(j,k,f))*x{m,f}(:,j + 1,k));
                                     v  = v + px + qL - qx;
                                 end
                                 

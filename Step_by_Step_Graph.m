@@ -46,13 +46,19 @@ mdp.erp = 1;
 mdp.Aname = {'VictimObservation'};
 mdp.Bname = {'AgentLocation', 'VictimLocation'};
 
-mdp_checked = spm_MDP_check(mdp);
+%mdp_checked = spm_MDP_check(mdp);
+%MDP = spm_MDP_VB_X_tutorial(mdp_checked);
+%spm_figure('GetWin','Figure 1'); clf    % display behavior
+%spm_MDP_VB_LFP(MDP); 
+%spm_figure('GetWin','Figure 2'); clf    % display behavior
+%spm_MDP_VB_trial(MDP); 
 
 N = 4; % number of trials
-
+mdp_checked = spm_MDP_check(mdp);
 MDP = mdp_checked;
-
 [MDP(1:N)] = deal(MDP);
-
 MDP = spm_MDP_VB_X_tutorial(MDP);
+
+
+
 
